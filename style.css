@@ -1,0 +1,337 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #000;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 15px 0;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background: #000;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+/* Header Section */
+header {
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    flex-direction: column;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Home Section Layout */
+.home-container {
+    display: flex;
+    align-items: center; /* Konten sejajar secara vertikal */
+    gap: 20px; /* Jarak antara slider dan teks */
+    padding: 20px; /* Opsional: Ruang sekitar */
+    height: 100vh; /* Tinggi penuh layar */
+}
+
+.slider {
+    flex: 1; /* Slider mengisi 50% dari ruang */
+    max-width: 50%;
+}
+
+.slider img {
+    width: 50%; /* Supaya gambar memenuhi lebar slider */
+    height: auto; /* Pertahankan rasio gambar */
+    border-radius: 10px; /* Efek melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.hero {
+    flex: 1; /* Hero text mengisi 50% dari ruang */
+    text-align: left; /* Teks rata kiri */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Section Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+.project-card {
+    background: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 700px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Skills Section */
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap; /* Responsif */
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.skill-grid div {
+    background: #333;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.skill-grid div:hover {
+    background: #00e6e6;
+    color: #111;
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-icon {
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.contact-icon i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.contact-icon:hover {
+    color: #00e676; /* Warna hijau saat hover */
+    transform: scale(1.1); /* Efek zoom */
+}
+
+.contact-icon span {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Tombol View CV */
+.btnku {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btnku:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 20px 0;
+    }
+
+    .project-card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .skill-grid div {
+        padding: 10px;
+    }
+
+    .home-container {
+        flex-direction: column; /* Tumpuk konten vertikal */
+        text-align: center; /* Teks di tengah */
+    }
+
+    .slider {
+        max-width: 100%; /* Slider memenuhi lebar layar */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
